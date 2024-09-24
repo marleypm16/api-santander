@@ -1,6 +1,7 @@
 package com.dio.labproject.Models;
 
 public class Feature {
+    private Long id;
     private String icon;
     private String description;
 

@@ -3,6 +3,7 @@ package com.dio.labproject.Models;
 import java.math.BigDecimal;
 
 public class Account {
+    private Long id;
     private String number;
     private String agency;
     private BigDecimal balance;

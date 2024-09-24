@@ -3,6 +3,7 @@ package com.dio.labproject.Models;
 import java.util.List;
 
 public class User {
+    private Long id;
     private String nome;
     private Account account;
     private List<Feature> features;
