@@ -1,23 +1,9 @@
 package com.dio.labproject.Models;
 
-public class Feature {
-    private Long id;
-    private String icon;
-    private String description;
+import jakarta.persistence.*;
 
-    public String getIcon() {
-        return icon;
-    }
+@Entity
+@Table(name = "tb_features")
+public class Feature extends BaseItem{
 
-    public void setIcon(String icon) {
-        this.icon = icon;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
 }

@@ -1,12 +1,21 @@
 package com.dio.labproject.Models;
 
-import java.math.BigDecimal;
+import jakarta.persistence.*;
 
+import java.math.BigDecimal;
+@Entity
+@Table(name = "tb_account")
 public class Account {
+    @Id
+    @GeneratedValue(strategy = GenerationType.UUID)
     private Long id;
+    @Column(nullable = false,unique = true)
     private String number;
+    @Column(nullable = false)
     private String agency;
+    @Column(precision = 2, scale = 2)
     private BigDecimal balance;
+    @Column(name = "addtional_limit",precision = 2, scale = 2)
     private BigDecimal limit;
 
 

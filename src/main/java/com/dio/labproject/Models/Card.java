@@ -1,10 +1,20 @@
 package com.dio.labproject.Models;
 
-import java.math.BigDecimal;
+import jakarta.persistence.*;
 
+import java.math.BigDecimal;
+@Entity
+@Table(name = "tb_card")
 public class Card {
+    @Id
+    @GeneratedValue(strategy = GenerationType.UUID)
     private Long id;
+
+    @Column(nullable = false, unique = true)
     private String number;
+
+    @Column(name = "avaible_limit",precision = 2, scale = 2)
+
     private BigDecimal limit;
 
 

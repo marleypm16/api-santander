@@ -1,13 +1,25 @@
 package com.dio.labproject.Models;
 
-import java.util.List;
+import jakarta.persistence.*;
 
+import java.util.List;
+@Entity
+@Table(name = "tb_user")
 public class User {
+    @Id
+    @GeneratedValue(strategy = GenerationType.UUID)
     private Long id;
+
     private String nome;
+    @OneToOne(cascade = CascadeType.ALL)
     private Account account;
+
+    @OneToMany
     private List<Feature> features;
+    @OneToOne(cascade = CascadeType.ALL)
     private Card card;
+
+    @OneToMany
     private List<News> news;
 
 

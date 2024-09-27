@@ -1,24 +1,10 @@
 package com.dio.labproject.Models;
 
-public class News {
-    private Long id;
-    private String icon;
-    private String description;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Table;
 
+@Entity
+@Table(name = "tb_news")
+public class News extends BaseItem {
 
-    public String getIcon() {
-        return icon;
-    }
-
-    public void setIcon(String icon) {
-        this.icon = icon;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
 }
